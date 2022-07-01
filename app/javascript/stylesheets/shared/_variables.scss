@@ -1,0 +1,77 @@
+$screen-pc: 1200px !default;
+$screen-mobile: 695px !default;
+
+$container-margin-xs: 16px;
+
+$color-gray-100: #1f2833;
+$color-black-100: #08080B;
+$color-carousel-pink: #f5e0e3; //red-300
+$color-blossom-pink: #ffc2c9; //red-400
+$color-red: #f4364c; //red-500
+$color-venetian-red: #c10b20; //red-600
+$color-maroon-red: #790714; //red-700
+$color-light-red: #ffe9eb;
+$color-pink: #db93b0;
+$color-lighter-pink: #ffdada;
+
+$color-tara-green: #e3f5e0; //green-300
+$color-heath: #40bf48; //green-500
+$color-apple-green: #33993a; //green-600
+$color-hunter-green: #246b29; //green-700
+$color-frog-green: #6bbe10;
+$color-forest-green: #229b0d;
+$color-tea-green: #d3f4cd;
+
+$color-pale-blue: #c2deff; //blue-400
+$color-dodger-blue: #0076ff; //blue-500
+$color-denim-blue: #0f5fbd; //blue-600
+$color-blue: #278bff;
+
+$color-papaya: #ffe9c2; //yellow-400
+$color-light-orange: #ffa300; //yellow-500
+$color-lightest-orange: #ffe9c2;
+$color-gold: #cc8200; //yellow-600
+$color-orange: #dd8d00;
+
+$color-white: #fff; //gray-100
+$color-alice-blue: #f3f5f7; //gray-200
+$color-solitude: #ebedef; //gray-300
+$color-bokara-grey: #dee2e6; //gray-400
+$color-spindle-gray: #bcc4cc; //gray-500
+$color-chateau-gray: #95a1ac; //gray-600
+$color-raven: #68737d; //gray-700
+$color-shark: #1f2833; //gray-800
+$color-number: #373b3d;
+$color-dark: #333;
+$color-gray: #ccc;
+$color-light-gray: #f8f8f8;
+$color-lightest-gray: #ddd;
+$color-warm-gray: #8a8a8a;
+$color-true-gray: #e5e5e5;
+$color-cadet-gray: #acb5bd;
+$color-whisper: #ebebeb;
+$color-light-slate-gray: #848890;
+$color-lavender-gray: #bcc4cc;
+
+$color-black: rgba(0, 0, 0, 0.8);
+
+$col-num: 12 !default;
+$col-gutter: 32px !default;
+$col-gutter-half: $col-gutter / 2 !default;
+
+$font-family-sans-serif: 'Roboto', sans-serif;
+$font-family-system: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+$font-size-xl: 32px;
+$font-size-lg: 28px;
+$font-size-md: 24px;
+$font-size-base: 16px;
+$font-size-sm: 14px;
+$font-size-xs: 12px;
+$font-size-xxs: 11px;
+
+$letter-spacing-base: 0.04em;
+
+$line-height-base: 1.5;
+
+$radius: 4px;

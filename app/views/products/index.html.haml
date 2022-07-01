@@ -1,0 +1,174 @@
+- content_for(:tab, "products")
+
+%section.shop.spad
+  .container
+    .row
+      .col-lg-3.col-md-3
+        .shop__sidebar
+          .sidebar__categories
+            .section-title
+              %h4 Categories
+            .categories__accordion
+              #accordionExample.accordion
+                .card
+                  .card-heading.active
+                    = link_to 'Category 1', products_path
+                .card
+                  .card-heading
+                    = link_to 'Category 2', products_path
+                .card
+                  .card-heading
+                    = link_to 'Category 3', products_path
+                .card
+                  .card-heading
+                    = link_to 'Category 4', products_path
+                .card
+                  .card-heading
+                    = link_to 'Category 5', products_path
+      .col-lg-9.col-md-9
+        .row
+          .col-lg-4.col-md-6
+            .product__item
+              .product__item__pic.set-bg{"data-setbg" => "/ashion/img/shop/shop-1.jpg"}
+                %ul.product__hover
+                  %li
+                    %a{:href => "/products/1"}
+                      = image_tag("bag.png", alt: 'seacrh', width: "18px", height: "20px")
+              .product__item__text
+                %h6
+                  %a{:href => "/products/1"} Furry hooded parka
+                .product__price $ 59.0
+          .col-lg-4.col-md-6
+            .product__item
+              .product__item__pic.set-bg{"data-setbg" => "/ashion/img/shop/shop-2.jpg"}
+                %ul.product__hover
+                  %li
+                    %a{:href => "/products/1"}
+                      = image_tag("bag.png", alt: 'seacrh', width: "18px", height: "20px")
+              .product__item__text
+                %h6
+                  %a{:href => "/products/1"} Flowy striped skirt
+                .product__price $ 49.0
+          .col-lg-4.col-md-6
+            .product__item
+              .product__item__pic.set-bg{"data-setbg" => "/ashion/img/shop/shop-3.jpg"}
+                %ul.product__hover
+                  %li
+                    %a{:href => "/products/1"}
+                      = image_tag("bag.png", alt: 'seacrh', width: "18px", height: "20px")
+              .product__item__text
+                %h6
+                  %a{:href => "/products/1"} Croc-effect bag
+                .product__price $ 59.0
+          .col-lg-4.col-md-6
+            .product__item
+              .product__item__pic.set-bg{"data-setbg" => "/ashion/img/shop/shop-4.jpg"}
+                %ul.product__hover
+                  %li
+                    %a{:href => "/products/1"}
+                      = image_tag("bag.png", alt: 'seacrh', width: "18px", height: "20px")
+              .product__item__text
+                %h6
+                  %a{:href => "/products/1"} Dark wash Xavi jeans
+                .product__price $ 59.0
+          .col-lg-4.col-md-6
+            .product__item.sale
+              .product__item__pic.set-bg{"data-setbg" => "/ashion/img/shop/shop-5.jpg"}
+                .label Sale
+                %ul.product__hover
+                  %li
+                    %a{:href => "/products/1"}
+                      = image_tag("bag.png", alt: 'seacrh', width: "18px", height: "20px")
+              .product__item__text
+                %h6
+                  %a{:href => "/products/1"} Ankle-cuff sandals
+                .product__price
+                  $ 49.0
+                  %span $ 59.0
+          .col-lg-4.col-md-6
+            .product__item
+              .product__item__pic.set-bg{"data-setbg" => "/ashion/img/shop/shop-6.jpg"}
+                %ul.product__hover
+                  %li
+                    %a{:href => "/products/1"}
+                      = image_tag("bag.png", alt: 'seacrh', width: "18px", height: "20px")
+              .product__item__text
+                %h6
+                  %a{:href => "/products/1"} Contrasting sunglasses
+                .product__price $ 59.0
+          .col-lg-4.col-md-6
+            .product__item
+              .product__item__pic.set-bg{"data-setbg" => "/ashion/img/shop/shop-7.jpg"}
+                %ul.product__hover
+                  %li
+                    %a{:href => "/products/1"}
+                      = image_tag("bag.png", alt: 'seacrh', width: "18px", height: "20px")
+              .product__item__text
+                %h6
+                  %a{:href => "/products/1"} Circular pendant earrings
+                .product__price $ 59.0
+          .col-lg-4.col-md-6
+            .product__item
+              .product__item__pic.set-bg{"data-setbg" => "/ashion/img/shop/shop-8.jpg"}
+                %ul.product__hover
+                  %li
+                    %a{:href => "/products/1"}
+                      = image_tag("bag.png", alt: 'seacrh', width: "18px", height: "20px")
+              .product__item__text
+                %h6
+                  %a{:href => "/products/1"} Cotton T-Shirt
+                .product__price $ 59.0
+          .col-lg-4.col-md-6
+            .product__item.sale
+              .product__item__pic.set-bg{"data-setbg" => "/ashion/img/shop/shop-9.jpg"}
+                .label Sale
+                %ul.product__hover
+                  %li
+                    %a{:href => "/products/1"}
+                      = image_tag("bag.png", alt: 'seacrh', width: "18px", height: "20px")
+              .product__item__text
+                %h6
+                  %a{:href => "/products/1"} Water resistant zips backpack
+                .product__price
+                  $ 49.0
+                  %span $ 59.0
+          .col-lg-12.text-center
+            .pagination__option
+              %a{:href => "#"} 1
+              %a{:href => "#"} 2
+              %a{:href => "#"} 3
+              %a{:href => "#"}
+                = image_tag("next_page.png", alt: 'seacrh', width: "10px", height: "14px")
+.instagram
+  .container-fluid
+    .row
+      .col-lg-2.col-md-4.col-sm-4.p-0
+        .instagram__item.set-bg{"data-setbg" => "/ashion/img/instagram/insta-1.jpg"}
+          .instagram__text
+            %i.fa.fa-instagram
+            %a{:href => "#"} @ ashion_shop
+      .col-lg-2.col-md-4.col-sm-4.p-0
+        .instagram__item.set-bg{"data-setbg" => "/ashion/img/instagram/insta-2.jpg"}
+          .instagram__text
+            %i.fa.fa-instagram
+            %a{:href => "#"} @ ashion_shop
+      .col-lg-2.col-md-4.col-sm-4.p-0
+        .instagram__item.set-bg{"data-setbg" => "/ashion/img/instagram/insta-3.jpg"}
+          .instagram__text
+            %i.fa.fa-instagram
+            %a{:href => "#"} @ ashion_shop
+      .col-lg-2.col-md-4.col-sm-4.p-0
+        .instagram__item.set-bg{"data-setbg" => "/ashion/img/instagram/insta-4.jpg"}
+          .instagram__text
+            %i.fa.fa-instagram
+            %a{:href => "#"} @ ashion_shop
+      .col-lg-2.col-md-4.col-sm-4.p-0
+        .instagram__item.set-bg{"data-setbg" => "/ashion/img/instagram/insta-5.jpg"}
+          .instagram__text
+            %i.fa.fa-instagram
+            %a{:href => "#"} @ ashion_shop
+      .col-lg-2.col-md-4.col-sm-4.p-0
+        .instagram__item.set-bg{"data-setbg" => "/ashion/img/instagram/insta-6.jpg"}
+          .instagram__text
+            %i.fa.fa-instagram
+            %a{:href => "#"} @ ashion_shop

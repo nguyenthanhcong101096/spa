@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %title SPA
+    %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}/
+    %title Ashion | Template
+    %link{:href => "https://fonts.googleapis.com/css2?family=Cookie&display=swap", :rel => "stylesheet"}/
+    %link{:href => "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap", :rel => "stylesheet"}/
+    %link{:href => "/ashion/css/A.bootstrap.min.css+font-awesome.min.css+elegant-icons.css+jquery-ui.min.css+magnific-popup.css+owl.carousel.min.css+slicknav.min.css+style.css,Mcc.TqZU-qSV-1.css.pagespeed.cf.oY1hdioJL9.css", :rel => "stylesheet", :type => "text/css"}/
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    -# = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    = render 'layouts/load'
+    = render 'layouts/header', tab: yield(:tab)
+    = yield
+    = render 'layouts/footer'
+    = render 'layouts/search_model'
+    = render 'layouts/load_js'

@@ -1,0 +1,35 @@
+%section.contact.spad
+  .container
+    .row
+      .col-lg-6.col-md-6
+        .contact__content
+          .contact__address
+            %h5 Contact info
+            %ul
+              %li
+                %h6
+                  = image_tag("address.png", alt: 'seacrh', width: "15px", height: "20px")
+                  Address
+                %p 160 Pennsylvania Ave NW, Washington, Castle, PA 16101-5161
+              %li
+                %h6
+                  = image_tag("phone.png", alt: 'seacrh', width: "15px", height: "20px")
+                  Phone
+                %p
+                  %span 125-711-811
+                  %span 125-668-886
+              %li
+                %h6
+                  = image_tag("payment.png", alt: 'seacrh', width: "15px", height: "15px")
+                  Support
+                %p example@gmail.com
+          .contact__form
+            %h5 SEND MESSAGE
+            %form{:action => "#"}
+              %input{:placeholder => "Name", :type => "text"}/
+              %input{:placeholder => "Email", :type => "text"}/
+              %textarea{:placeholder => "Message"}
+              %button.site-btn{:type => "submit"} Send Message
+      .col-lg-6.col-md-6
+        .contact__map
+          %iframe{:allowfullscreen => "", :height => "780", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48158.305462977965!2d-74.13283844036356!3d41.02757295168286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2e440473470d7%3A0xcaf503ca2ee57958!2sSaddle%20River%2C%20NJ%2007458%2C%20USA!5e0!3m2!1sen!2sbd!4v1575917275626!5m2!1sen!2sbd", :style => "border:0"}

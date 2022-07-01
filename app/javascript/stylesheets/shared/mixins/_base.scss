@@ -1,0 +1,63 @@
+// Mixin for responsive
+@mixin respond-to-mobile() {
+  @media (max-width: $screen-mobile - 1) {
+    @content;
+  }
+}
+
+@mixin respond-to-not-mobile() {
+  @media (min-width: $screen-mobile) {
+    @content;
+  }
+}
+
+@mixin respond-to-tablet() {
+  @media (min-width: $screen-mobile) and (max-width: $screen-pc - 1) {
+    @content;
+  }
+}
+
+@mixin respond-to-pc() {
+  @media (min-width: $screen-pc) {
+    @content;
+  }
+}
+
+@mixin repond-to-not-pc() {
+  @media (max-width: $screen-pc - 1) {
+    @content;
+  }
+}
+
+// Centered position for element
+@mixin centered($horizontal, $vertical) {
+  position: absolute;
+  left: $horizontal;
+  top: $vertical;
+  transform: translate(-$horizontal, -$vertical);
+}
+
+@mixin center-y() {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin center-x() {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin flexbox($justify, $alignItems) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $alignItems;
+}
+
+@mixin background-img($position: center, $size: cover) {
+  background-position: $position;
+  background-repeat: no-repeat;
+  background-size: $size;
+}
+

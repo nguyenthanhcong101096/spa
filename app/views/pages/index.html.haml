@@ -1,0 +1,300 @@
+- content_for(:tab, "home")
+
+%section.categories
+  .container-fluid
+    .row
+      .col-lg-6.p-0
+        .categories__item.categories__large__item.set-bg{"data-setbg" => "/ashion/img/categories/category-1.jpg"}
+          .categories__text
+            %h1 Category 1
+            %p Description
+            %a{:href => "/products"} Shop now
+      .col-lg-6
+        .row
+          .col-lg-6.col-md-6.col-sm-6.p-0
+            .categories__item.set-bg{"data-setbg" => "/ashion/img/categories/category-2.jpg"}
+              .categories__text
+                %h4 Category 2
+                %p Description
+                %a{:href => "/products"} Shop now
+          .col-lg-6.col-md-6.col-sm-6.p-0
+            .categories__item.set-bg{"data-setbg" => "/ashion/img/categories/category-3.jpg"}
+              .categories__text
+                %h4 Category 3
+                %p Description
+                %a{:href => "/products"} Shop now
+          .col-lg-6.col-md-6.col-sm-6.p-0
+            .categories__item.set-bg{"data-setbg" => "/ashion/img/categories/category-4.jpg"}
+              .categories__text
+                %h4 Category 4
+                %p Description
+                %a{:href => "/products"} Shop now
+          .col-lg-6.col-md-6.col-sm-6.p-0
+            .categories__item.set-bg{"data-setbg" => "/ashion/img/categories/category-5.jpg"}
+              .categories__text
+                %h4 Category 5
+                %p Description
+                %a{:href => "/products"} Shop now
+%section.product.spad
+  .container
+    .row
+      .col-lg-4.col-md-4
+        .section-title
+          %h4 New product
+      .col-lg-8.col-md-8
+        %ul.filter__controls
+          %li.active{"data-filter" => "*"} All Categories
+          %li{"data-filter" => ".women"} Category 1
+          %li{"data-filter" => ".men"} Category 2
+          %li{"data-filter" => ".kid"} Category 3
+          %li{"data-filter" => ".accessories"} Category 4
+          %li{"data-filter" => ".cosmetic"} Category 5
+    .row.property__gallery
+      .col-lg-3.col-md-4.col-sm-6.mix.women
+        .product__item
+          .product__item__pic.set-bg{"data-setbg" => "/ashion/img/product/product-1.jpg"}
+            .label.new New
+            %ul.product__hover
+              %li
+                %a{:href => "#"}
+                  = image_tag("bag.png", alt: 'seacrh', width: "18px", height: "20px")
+          .product__item__text
+            %h6
+              %a{:href => "#"} Buttons tweed blazer
+            .product__price $ 59.0
+      .col-lg-3.col-md-4.col-sm-6.mix.men
+        .product__item
+          .product__item__pic.set-bg{"data-setbg" => "/ashion/img/product/product-2.jpg"}
+            .label.new New
+            %ul.product__hover
+              %li
+                %a{:href => "#"}
+                  = image_tag("bag.png", alt: 'seacrh', width: "18px", height: "20px")
+          .product__item__text
+            %h6
+              %a{:href => "#"} Flowy striped skirt
+            .product__price $ 49.0
+      .col-lg-3.col-md-4.col-sm-6.mix.accessories
+        .product__item
+          .product__item__pic.set-bg{"data-setbg" => "/ashion/img/product/product-3.jpg"}
+            .label.new New
+            %ul.product__hover
+              %li
+                %a{:href => "#"}
+                  = image_tag("bag.png", alt: 'seacrh', width: "18px", height: "20px")
+          .product__item__text
+            %h6
+              %a{:href => "#"} Cotton T-Shirt
+            .product__price $ 59.0
+      .col-lg-3.col-md-4.col-sm-6.mix.cosmetic
+        .product__item
+          .product__item__pic.set-bg{"data-setbg" => "/ashion/img/product/product-4.jpg"}
+            .label.new New
+            %ul.product__hover
+              %li
+                %a{:href => "#"}
+                  = image_tag("bag.png", alt: 'seacrh', width: "18px", height: "20px")
+          .product__item__text
+            %h6
+              %a{:href => "#"} Slim striped pocket shirt
+            .product__price $ 59.0
+      .col-lg-3.col-md-4.col-sm-6.mix.kid
+        .product__item
+          .product__item__pic.set-bg{"data-setbg" => "/ashion/img/product/product-5.jpg"}
+            .label.new New
+            %ul.product__hover
+              %li
+                %a{:href => "#"}
+                  = image_tag("bag.png", alt: 'seacrh', width: "18px", height: "20px")
+          .product__item__text
+            %h6
+              %a{:href => "#"} Fit micro corduroy shirt
+            .product__price $ 59.0
+      .col-lg-3.col-md-4.col-sm-6.mix.women.men.kid.accessories.cosmetic
+        .product__item.sale
+          .product__item__pic.set-bg{"data-setbg" => "/ashion/img/product/product-6.jpg"}
+            .label.new New
+            %ul.product__hover
+              %li
+                %a{:href => "#"}
+                  = image_tag("bag.png", alt: 'seacrh', width: "18px", height: "20px")
+          .product__item__text
+            %h6
+              %a{:href => "#"} Tropical Kimono
+            .product__price
+              $ 49.0
+              %span $ 59.0
+      .col-lg-3.col-md-4.col-sm-6.mix.women.men.kid.accessories.cosmetic
+        .product__item
+          .product__item__pic.set-bg{"data-setbg" => "/ashion/img/product/product-7.jpg"}
+            .label.new New
+            %ul.product__hover
+              %li
+                %a{:href => "#"}
+                  = image_tag("bag.png", alt: 'seacrh', width: "18px", height: "20px")
+          .product__item__text
+            %h6
+              %a{:href => "#"} Contrasting sunglasses
+            .product__price $ 59.0
+      .col-lg-3.col-md-4.col-sm-6.mix.women.men.kid.accessories.cosmetic
+        .product__item.sale
+          .product__item__pic.set-bg{"data-setbg" => "/ashion/img/product/product-8.jpg"}
+            .label.new New
+            %ul.product__hover
+              %li
+                %a{:href => "#"}
+                  = image_tag("bag.png", alt: 'seacrh', width: "18px", height: "20px")
+          .product__item__text
+            %h6
+              %a{:href => "#"} Water resistant backpack
+            .product__price
+              $ 49.0
+              %span $ 59.0
+%section.banner.set-bg{"data-setbg" => "/ashion/img/banner/banner-1.jpg"}
+  .container
+    .row
+      .col-xl-7.col-lg-8.m-auto
+        .banner__slider.owl-carousel
+          .banner__item
+            .banner__text
+              %span The Chloe Collection
+              %h1 The Project Jacket
+              %a{:href => "/products"} Shop now
+          .banner__item
+            .banner__text
+              %span The Chloe Collection
+              %h1 The Project Jacket
+              %a{:href => "/products"} Shop now
+          .banner__item
+            .banner__text
+              %span The Chloe Collection
+              %h1 The Project Jacket
+              %a{:href => "/products"} Shop now
+%section.trend.spad
+  .container
+    .row
+      .col-lg-4.col-md-4.col-sm-6
+        .trend__content
+          .section-title
+            %h4 Hot Trend
+          .trend__item
+            .trend__item__pic
+              %img{:alt => "", :src => "/ashion/img/trend/xht-1.jpg.pagespeed.ic.egi4bL3t5c.webp"}/
+            .trend__item__text
+              %h6 Chain bucket bag
+              .product__price $ 59.0
+          .trend__item
+            .trend__item__pic
+              %img{:alt => "", :src => "/ashion/img/trend/xht-2.jpg.pagespeed.ic.3YjuD2AOub.webp"}/
+            .trend__item__text
+              %h6 Pendant earrings
+              .product__price $ 59.0
+          .trend__item
+            .trend__item__pic
+              %img{:alt => "", :src => "/ashion/img/trend/xht-3.jpg.pagespeed.ic.fw_LsIXAiZ.webp"}/
+            .trend__item__text
+              %h6 Cotton T-Shirt
+              .product__price $ 59.0
+      .col-lg-4.col-md-4.col-sm-6
+        .trend__content
+          .section-title
+            %h4 Best seller
+          .trend__item
+            .trend__item__pic
+              %img{:alt => "", :src => "/ashion/img/trend/xbs-1.jpg.pagespeed.ic.mJ3HA8np2n.webp"}/
+            .trend__item__text
+              %h6 Cotton T-Shirt
+              .product__price $ 59.0
+          .trend__item
+            .trend__item__pic
+              %img{:alt => "", :src => "/ashion/img/trend/xbs-2.jpg.pagespeed.ic.oPC5eRYONC.webp"}/
+            .trend__item__text
+              %h6
+                Zip-pockets pebbled tote
+                = succeed "briefcase" do
+                  %br/
+              .product__price $ 59.0
+          .trend__item
+            .trend__item__pic
+              %img{:alt => "", :src => "/ashion/img/trend/xbs-3.jpg.pagespeed.ic.UbErREAs1-.webp"}/
+            .trend__item__text
+              %h6 Round leather bag
+              .product__price $ 59.0
+      .col-lg-4.col-md-4.col-sm-6
+        .trend__content
+          .section-title
+            %h4 Feature
+          .trend__item
+            .trend__item__pic
+              %img{:alt => "", :src => "/ashion/img/trend/xf-1.jpg.pagespeed.ic.Q7t675Gcer.webp"}/
+            .trend__item__text
+              %h6 Bow wrap skirt
+              .product__price $ 59.0
+          .trend__item
+            .trend__item__pic
+              %img{:alt => "", :src => "/ashion/img/trend/xf-2.jpg.pagespeed.ic.LE7FQXfxeP.webp"}/
+            .trend__item__text
+              %h6 Metallic earrings
+              .product__price $ 59.0
+          .trend__item
+            .trend__item__pic
+              %img{:alt => "", :src => "/ashion/img/trend/xf-3.jpg.pagespeed.ic.larkQpUfvs.webp"}/
+            .trend__item__text
+              %h6 Flap cross-body bag
+              .product__price $ 59.0
+%section.services.spad
+  .container
+    .row
+      .col-lg-3.col-md-4.col-sm-6
+        .services__item
+          = image_tag("free_ship.png", alt: 'seacrh', width: "41px", height: "36px")
+          %h6 Free Shipping
+          %p For all oder over $99
+      .col-lg-3.col-md-4.col-sm-6
+        .services__item
+          = image_tag("money.png", alt: 'seacrh', width: "45px", height: "33px")
+          %h6 Money Back Guarantee
+          %p If good have Problems
+      .col-lg-3.col-md-4.col-sm-6
+        .services__item
+          = image_tag("support.png", alt: 'seacrh', width: "40px", height: "40px")
+          %h6 Online Support 24/7
+          %p Dedicated support
+      .col-lg-3.col-md-4.col-sm-6
+        .services__item
+          = image_tag("payment.png", alt: 'seacrh', width: "36px", height: "33px")
+          %h6 Payment Secure
+          %p 100% secure payment
+.instagram
+  .container-fluid
+    .row
+      .col-lg-2.col-md-4.col-sm-4.p-0
+        .instagram__item.set-bg{"data-setbg" => "/ashion/img/instagram/insta-1.jpg"}
+          .instagram__text
+            = image_tag("ins.png", alt: 'seacrh', width: "30px", height: "30px")
+            %a{:href => "#"} @ ashion_shop
+      .col-lg-2.col-md-4.col-sm-4.p-0
+        .instagram__item.set-bg{"data-setbg" => "/ashion/img/instagram/insta-2.jpg"}
+          .instagram__text
+            = image_tag("ins.png", alt: 'seacrh', width: "30px", height: "30px")
+            %a{:href => "#"} @ ashion_shop
+      .col-lg-2.col-md-4.col-sm-4.p-0
+        .instagram__item.set-bg{"data-setbg" => "/ashion/img/instagram/insta-3.jpg"}
+          .instagram__text
+            = image_tag("ins.png", alt: 'seacrh', width: "30px", height: "30px")
+            %a{:href => "#"} @ ashion_shop
+      .col-lg-2.col-md-4.col-sm-4.p-0
+        .instagram__item.set-bg{"data-setbg" => "/ashion/img/instagram/insta-4.jpg"}
+          .instagram__text
+            = image_tag("ins.png", alt: 'seacrh', width: "30px", height: "30px")
+            %a{:href => "#"} @ ashion_shop
+      .col-lg-2.col-md-4.col-sm-4.p-0
+        .instagram__item.set-bg{"data-setbg" => "/ashion/img/instagram/insta-5.jpg"}
+          .instagram__text
+            = image_tag("ins.png", alt: 'seacrh', width: "30px", height: "30px")
+            %a{:href => "#"} @ ashion_shop
+      .col-lg-2.col-md-4.col-sm-4.p-0
+        .instagram__item.set-bg{"data-setbg" => "/ashion/img/instagram/insta-6.jpg"}
+          .instagram__text
+            = image_tag("ins.png", alt: 'seacrh', width: "30px", height: "30px")
+            %a{:href => "#"} @ ashion_shop

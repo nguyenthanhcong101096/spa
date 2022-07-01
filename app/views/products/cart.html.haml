@@ -1,0 +1,72 @@
+%section.shop-cart.spad
+  .container
+    .row
+      .col-lg-12
+        .shop__cart__table
+          %table
+            %thead
+              %tr
+                %th Product
+                %th Price
+                %th Quantity
+                %th Total
+                %th
+            %tbody
+              %tr
+                %td.cart__product__item
+                  %img{:alt => "", "data-pagespeed-url-hash" => "4207875790", :onload => "pagespeed.CriticalImages.checkImageForCriticality(this);", :src => "data:image/webp;base64,UklGRiwDAABXRUJQVlA4ICADAADwEQCdASpaAFoAPm0wlUekIqIhJzQLIIANiWkAE6Kok3aSpy64+tJRq+tB/e/rF6RfqHUOf1uNY9xsIbBP2Q0rVJtNxaCkYzP8cu5WagiSEk+k6Z9uz2wcT/qR+X3r4Qiapg/o0mqj+50w2q1ly0Ogsa4kVWDF9zr1ymiF4EoCCPui72zXRVI3gWDy7dCf0b+k0t0Ca+XhgAD+9SDgU+m/EdpzXyyAuK1T8A+W6P/1Y4t1xMasYMfZ26/6MqfABcIbMv/7R01268iBYAVTDevbgN3xwF42HxEPVv/DxHEE0NbMIFQOf2/Gk8vOgOGNC4P7898yT+GEpolPys0+XJxXTMA+FuFnCC2yuY+oNABbf7Q/+11q/HdgDkG+3PWTcBR7yH05rxmMZtT5LPCHw7n48MqB3UQWjkgq3IVf/W3/gG3KJCs5LruC469fDNgi9rnn0rNovxywoVGMXLjPdRarj6VITshDUXtJLUyCLxp7u7CzzodB9UVJq1gyaCyhsiev6xbdx+8E9FrENTgGsT0Vwww9TT08Rsntc3oyFNoTO9a3BE0AsPJnVD7oL6O96KHgl8ovT3kRwWOlW4ln1UuSfeJLYJMiAiYu7tmRD28VYHp6DZ+7Ec+ENzzV416b0rA1x43Yizd8vuxohTHSVrSIuhKPNTNiWXpceTdfWXpqloGMSQMHC7v4JMd0kzrnvkFRyHXG4XtNL5ySP8au3kiT35XkzXWhQM6cXjfb5n7RMQl0GZbEDAH27JZuJEHY1FIYbb1p8xOMHQFVXgCvK9RbyD3Kyz9+lOaTFYhfN4TLY4Cj3XhMK1kRCJ+e8hBK1SBDHIyNY99XXJtK908A54wkId2nv8YlfQWjAJzp6TPz2hqw5USGMiLRXLBKYbk9iktJED4EJ9QsTPxo46U8ql6SzL4nRJwO9r646KWTzOGmaYTivnwCKk9q7hFkjr/cJ2rsgnEfXWksrC5yLww6gsYE0oIZ8f2xGRksr/+bXzKUQbzuPSJPCzVZ+A6t261IAGuYijYPzBWku4buGSskaLEoqgT8AfXermKCuXrdL3AAAA=="}/
+                  .cart__product__item__title
+                    %h6 Chain bucket bag
+                %td.cart__price $ 150.0
+                %td.cart__quantity
+                  .pro-qty
+                    %input{:type => "text", :value => "1"}/
+                %td.cart__total $ 300.0
+              %tr
+                %td.cart__product__item
+                  %img{:alt => "", "data-pagespeed-url-hash" => "207408415", :onload => "pagespeed.CriticalImages.checkImageForCriticality(this);", :src => "data:image/webp;base64,UklGRi4EAABXRUJQVlA4ICIEAACQFACdASpaAFoAPm0wlEckIqIhJzYMAIANiWks5kOaH2K6UJehbEmTLDkb/onaM/pcv3XviJYTWjwrBucLRq4IH5fhigjeJ4misaBpOdDGZyJapsbloScmW0lA+6kgrm0ldAHn0HNl798CIFR3g1I/8bxAQFPM4ay4rprITtBtgh9Jh2+ksqszhxlVQrCLGb0yLY8O43ldicrQGlubeQ1JGmmQE/Chf9vz+CfwAAD++UvJfvq2koR2D4qQi6vPOJk/9kfJNvUKmVvbSrQ8Ug0qV9E8fEkCOj+6X/K2/7t+5tX2jcDycO18QPB0YVwv8FuoVB69vjM8/HwH+Jknv/cthXlb+3YcTIIRS5/mnE9HLmGY7ThPwAt6/vPCCQHbXMbJuTRr1ltHCxG7oPohRSxb50v8maVtZ+FAYvSYkXZQA0EIQ22Hb7073hv/Mx1obdqN5vYaP+xi5fKbP5xL8RTcYZlcVp35xFXDd+KVkbp8nMxOluyaq4fZITjdKL+vh/ib79w29+b67P0VBV3DahawV1T7wHUrbDdY7nPG64SSTBKmjrLYO4H+0QBclPSbQ8/anEewlX6QrVkX9304HORKt4bnpumrD/B3xBfwzu6kM3jjKHVPH1WYU9TLi4UevWl0o9SeZO0fo7/Tx6uJY4dlaqmGJA7cN55wUXoq38ClNIB2suLC1s7a4XN7P1u8z1D3L42ANFgAT5KJ3mr9/eZo6LNHPqHhtWj1WZMzsD1XdDRlfRyamUWUAQ71NZgFicDNVM2FAIjXd2VYbtfjfaK+Gzd39lpxu+nyawKq0YOfAbRB/lDyiaJ3gCGfrUiWE9oE5TEfrF/Ntg3PMO6cBBHXjHXKcvNs9Evs6hXwFHLGYRIiGOcCPaBIdKKoD/L2df/zny89SK+DLM31ySfZcUZdfkSo+5CHzfCwUMTUJwFfyqOCt3iFNcHK1vylVeswF/Nc2bVwOe6TtFoI6p5pPTiqZJ1UCrr6GAHyUompzhqq9awr+/+/mePGjGFuFE0hwa/1MHe5lS4BQc4Hdi8wfu/s9AAMHcGEp1LJkm1rzegsFnVQtyJSPvKqMBUOtoOAq1/pjleM2lpmrvs1K0zHMITGkD1gxcTb4EM4gkgPbTAyiZykf3b/JNC81gPufENe4kb3vV8MWvn2jKcf3hTqbNgcf4n7Ba+K5t7sv3k15DLsdjGaYXatw3f6b54bfdBWdQInNtV6d3eqwEjwFG3duAjCROg+277aB4yeLZYoo+f5wFSIFV5X/M0jbNzhvm9h/tPbNXMSn8SFtHNAiRaE9ZfteqpV64YaL2/mi38mZ9If0sbbWb698/U5f5/DTpB46mEr//xi/aOkvGv6EWLLxZZX7hDCQcYvflx+8EBM735cX+oebAkpjrmECptlBlqDlEVIAA=="}/
+                  .cart__product__item__title
+                    %h6 Zip-pockets pebbled tote briefcase
+                %td.cart__price $ 170.0
+                %td.cart__quantity
+                  .pro-qty
+                    %input{:type => "text", :value => "1"}/
+                %td.cart__total $ 170.0
+              %tr
+                %td.cart__product__item
+                  %img{:alt => "", "data-pagespeed-url-hash" => "501908336", :onload => "pagespeed.CriticalImages.checkImageForCriticality(this);", :src => "data:image/webp;base64,UklGRkIEAABXRUJQVlA4IDYEAACQFACdASpaAFoAPm0ulEYkIqIhqdor0IANiWUA0xyESRkO57O7mX1L+PyA/9jXly1fq7rzn1H/KefP0VNHH0+ZKQ3k8bfcfJ89ZdH2epv8jIJDI4VtFAU0BU71fN7DI/BvhJ9H+ZOz24E6rSVqyekF11IYCeBy++ebe+RZqKArkKii59ij8zNCgMWqo9eTW57/ro7aqNjUKyySKsq8HP0BvuKykMNiTPLBydJ/gAD++fM2oJmdfMPGgPmSnePVGf+IdqhGNXzS6qQeNDlN92HqAemte/SlwRBMn7rY6c5xyxjOzhJR59yfh+nG6yGFLCZgQP8zvR3INq4c1NykDXNfpz2S/6TXin6f1MzZuXkzATKNHs6xh1SSru/shbccmhJ/xmuxSL5NpDmw6bSDHyaCLHIGGp7fnnHX1dEtCS0Q1TJeEGewQILdwglOmCQo7n1axIbw061uUms2Zs/9i2+i5bVXpUz7r+XX/bhobj2rg+L6+ubAdBCi79uCJvTA3OrH8oy6ExCA/ccTGIvCQXKsbwHBOPjhU6B8b8ItX9Mnt6CzJ6SxJgI3FuuGEUz2X5lQ9SgEH+e8fl9NzqzP5OwswU0rlRKsgrR1HK+66CmSlGR1DcIO0J+5cnSQLDs6O8lllleqoy0f4QT5nCIFCVXc5zndP+R5GjAo5NVyMlpNCBRVmdxl/dIEI3krr1hQ4b6bYND/syqfZuQ7Zgrk/f6Z1CLOspVkf7FYL2iRQo3XZou4n005cAIo0VdPx5cT6OTqi7ezjc/9LT/cojaVvS2eDCvFXdz+o2UHBqoPdDY0etXwndA5FkR7nvj/RaTpjFWD/zLCRvDwXigUg7uxpYM+C93VRKeduUVLU+6oM9QXEe6sBj9PY9AHS9Y1WNokN/937mpSoU8/PikLlc+9buX1g9B16crrsHEruwJ8pJMBJ3P/dZcmYQ9nbQLkyjEMpsEyC4ty9oD+iNPRibc6UpIJz+QAl+ifPxh4Ucg80AwHj2R+BFlTpGZB4Edjj/9kO5ViPGBXs4O55rlYN6JgfXUknnOMnHaelYI0NyjioRH6CP/IdCZxt3b/0GLaoLgDuezYj5/6Ol3YDUOjmwSOScKvURkRu+CQ/UW1aIyBJeQrH2BWlwbN+VqSApUQCWLitLgfzlABhxgjSkcppjTSjB5mgu3zjvBEFdoZ8k2vE4SdlasGa8+ZmvPvkmYCs6KC8SREAGxx03J4lHRx74baEA9Xq3VNxGn3S1/6yBquA6ilsQwVjdc1QZL3rnDYbDIENQdC+K+xcskvApk/cGGmq5JDa48JEyvFPJbumwQSI09x8rkM6HbKh8nxkLTIxu/TRrIWLM7/yCXH/GkuAuzrg5nhpVEwvlW/gMgfUKE9DzDh5RC8T4WNgN1JjC+7aOUsidighmXQPVMrHNnlvIsHwSklr4jyKwAA"}/
+                  .cart__product__item__title
+                    %h6 Black jean
+                %td.cart__price $ 85.0
+                %td.cart__quantity
+                  .pro-qty
+                    %input{:type => "text", :value => "1"}/
+                %td.cart__total $ 170.0
+              %tr
+                %td.cart__product__item
+                  %img{:alt => "", "data-pagespeed-url-hash" => "796408257", :onload => "pagespeed.CriticalImages.checkImageForCriticality(this);", :src => "data:image/webp;base64,UklGRlICAABXRUJQVlA4IEYCAACQDwCdASpaAFoAPm0wkkWkIyGYfXR4QAbEtIBrGZozB8cqK9u27DNbaIGAw4TamRTCqSr+Me7RnNgDP1vny0d7hVzajyKuVX9KO/xLBjPJPgZKTvGe5gqpkFv57Y1xwq+qypgH1RAqfDgsfF4otC/ISuaeo5QRHbsVQyEcEoC+V77mrKjwAP76Ap6BCFhIF6nK1B1tNWhNI+uk1GekNvuFmTzB/9M7o2Pvo4MKcYTZ+VTM5tMGF1L8t+w+VwL3IebZKrf313czm7nAKhxsodl5f3wqwr+FIHvyIy1F3TstMIHv3Z+98TdXlZmn17PXuOOAcLXGpdXmaGKTYiO8/3O5OOrHckW01lUO59ykmfVeOk0M6aex6dtks+ZCrOrssl9S+1ouOTYDfOCfJweL0BLqF/jolw+TeOgz7zyq8OR7vReWr7zhKw1B+0v9jLjx50zGbZkMS+FJNRtJlGX3HBSGs1NKWPiwotZuk//TV0TIR1822UEJaaDcbUnfOOLwADM5X0f2mJzqjjOb9Joz8FmMJtkiAoNzpiaBTLhG4av1qBK3VaXKJIInX6ape0op165PuhCP37WGcjFcynQNJZmJ/c5qlMuxnJz7k51Ue8E5Zwa3kVHzi63gCwIddIqws/AvnxmDaAO4MmqqGCv1V9TdzFKUf37H/DHbF/fnEOUFFy5KFL7kfZ3Yg/Dds+YeuUI70nU6Jq//K4iEOiy5ORShC5VLWym4/iTiQG6aXx+i9fLkxMXJvTjaJaaSZ28S231dIVKkAAA="}/
+                  .cart__product__item__title
+                    %h6 Cotton Shirt
+                %td.cart__price $ 55.0
+                %td.cart__quantity
+                  .pro-qty
+                    %input{:type => "text", :value => "1"}/
+                %td.cart__total $ 110.0
+    .row
+      .col-lg-6.col-md-6.col-sm-6
+        .cart__btn
+          %a{:href => "#"} Continue Shopping
+
+    .row
+      .col-lg-6
+      .col-lg-4.offset-lg-2
+        .cart__total__procced
+          %h6 Cart total
+          %ul
+            %li
+              Subtotal
+              %span $ 750.0
+            %li
+              Total
+              %span $ 750.0
+          %a.primary-btn{:href => "/products/checkout"} Proceed to checkout

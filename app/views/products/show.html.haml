@@ -1,0 +1,145 @@
+%section.product-details.spad
+  .container
+    .row
+      .col-lg-6
+        .product__details__pic
+          .product__details__pic__left.product__thumb.nice-scroll
+            %a.pt.active{:href => "#product-1"}
+              %img{:alt => "", "data-pagespeed-url-hash" => "3425536346", :onload => "pagespeed.CriticalImages.checkImageForCriticality(this);", :src => "https://picsum.photos/200/400"}/
+            %a.pt{:href => "#product-2"}
+              %img{:alt => "", "data-pagespeed-url-hash" => "3720036267", :onload => "pagespeed.CriticalImages.checkImageForCriticality(this);", :src => "https://picsum.photos/200/400"}/
+            %a.pt{:href => "#product-3"}
+              %img{:alt => "", "data-pagespeed-url-hash" => "4014536188", :onload => "pagespeed.CriticalImages.checkImageForCriticality(this);", :src => "https://picsum.photos/200/400"}/
+            %a.pt{:href => "#product-4"}
+              %img{:alt => "", "data-pagespeed-url-hash" => "14068813", :onload => "pagespeed.CriticalImages.checkImageForCriticality(this);", :src => "https://picsum.photos/200/400"}/
+          .product__details__slider__content
+            .product__details__pic__slider.owl-carousel
+              %img.product__big__img{:alt => "", "data-hash" => "product-1", "data-pagespeed-url-hash" => "3621627699", :onload => "pagespeed.CriticalImages.checkImageForCriticality(this);", :src => "https://picsum.photos/200/400"}/
+              %img.product__big__img{:alt => "", "data-hash" => "product-2", "data-pagespeed-url-hash" => "4210627541", :onload => "pagespeed.CriticalImages.checkImageForCriticality(this);", :src => "https://picsum.photos/200/400"}/
+              %img.product__big__img{:alt => "", "data-hash" => "product-3", "data-pagespeed-url-hash" => "3916127620", :onload => "pagespeed.CriticalImages.checkImageForCriticality(this);", :src => "https://picsum.photos/200/400"}/
+              %img.product__big__img{:alt => "", "data-hash" => "product-4", "data-pagespeed-url-hash" => "210160166", :onload => "pagespeed.CriticalImages.checkImageForCriticality(this);", :src => "https://picsum.photos/200/400"}/
+      .col-lg-6
+        .product__details__text
+          %h3
+            Essential structured blazer
+            %span Brand: SKMEIMore Men Watches from SKMEI
+          .product__details__price
+            $ 75.0
+            %span $ 83.0
+          %p Nemo enim ipsam voluptatem quia aspernatur aut odit aut loret fugit, sed quia consequuntur magni lores eos qui ratione voluptatem sequi nesciunt.
+          .product__details__button
+            .quantity
+              %span Quantity:
+              .pro-qty
+                %input{:type => "text", :value => "1"}/
+            %a.cart-btn{:href => "#"}
+              = image_tag("cart2.png", alt: 'seacrh', width: "14px", height: "16px")
+              Add to cart
+      .col-lg-12
+        .product__details__tab
+          %ul.nav.nav-tabs{:role => "tablist"}
+            %li.nav-item
+              %a.nav-link.active{"data-toggle" => "tab", :href => "#tabs-1", :role => "tab"} Description
+            %li.nav-item
+              %a.nav-link{"data-toggle" => "tab", :href => "#tabs-2", :role => "tab"} Specification
+            %li.nav-item
+              %a.nav-link{"data-toggle" => "tab", :href => "#tabs-3", :role => "tab"} Reviews ( 2 )
+          .tab-content
+            #tabs-1.tab-pane.active{:role => "tabpanel"}
+              %h6 Description
+              %p
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut loret fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt loret. Neque porro lorem quisquam est, qui dolorem ipsum quia
+                dolor si. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut loret fugit, sed quia ipsu consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Nulla consequat massa quis enim.
+              %p
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
+                nec, pellentesque eu, pretium quis, sem.
+            #tabs-2.tab-pane{:role => "tabpanel"}
+              %h6 Specification
+              %p
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut loret fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt loret. Neque porro lorem quisquam est, qui dolorem ipsum quia
+                dolor si. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut loret fugit, sed quia ipsu consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Nulla consequat massa quis enim.
+              %p
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
+                nec, pellentesque eu, pretium quis, sem.
+            #tabs-3.tab-pane{:role => "tabpanel"}
+              %h6 Reviews ( 2 )
+              %p
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut loret fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt loret. Neque porro lorem quisquam est, qui dolorem ipsum quia
+                dolor si. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut loret fugit, sed quia ipsu consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Nulla consequat massa quis enim.
+              %p
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
+                nec, pellentesque eu, pretium quis, sem.
+    .row
+      .col-lg-12.text-center
+        .related__title
+          %h5 RELATED PRODUCTS
+      .col-lg-3.col-md-4.col-sm-6
+        .product__item
+          .product__item__pic.set-bg{"data-setbg" => "https://picsum.photos/200/400"}
+            .label.new New
+            %ul.product__hover
+              %li
+                %a.image-popup{:href => "https://picsum.photos/200/400"}
+                  %span.arrow_expand
+              %li
+                %a{:href => "#"}
+                  %span.icon_heart_alt
+              %li
+                %a{:href => "#"}
+                  %span.icon_bag_alt
+          .product__item__text
+            %h6
+              %a{:href => "#"} Buttons tweed blazer
+            .product__price $ 59.0
+      .col-lg-3.col-md-4.col-sm-6
+        .product__item
+          .product__item__pic.set-bg{"data-setbg" => "https://picsum.photos/200/400"}
+            %ul.product__hover
+              %li
+                %a.image-popup{:href => "https://picsum.photos/200/400"}
+                  %span.arrow_expand
+              %li
+                %a{:href => "#"}
+                  %span.icon_heart_alt
+              %li
+                %a{:href => "#"}
+                  %span.icon_bag_alt
+          .product__item__text
+            %h6
+              %a{:href => "#"} Flowy striped skirt
+            .product__price $ 49.0
+      .col-lg-3.col-md-4.col-sm-6
+        .product__item
+          .product__item__pic.set-bg{"data-setbg" => "https://picsum.photos/200/400"}
+            .label.stockout out of stock
+            %ul.product__hover
+              %li
+                %a.image-popup{:href => "https://picsum.photos/200/400"}
+                  %span.arrow_expand
+              %li
+                %a{:href => "#"}
+                  %span.icon_heart_alt
+              %li
+                %a{:href => "#"}
+                  %span.icon_bag_alt
+          .product__item__text
+            %h6
+              %a{:href => "#"} Cotton T-Shirt
+            .product__price $ 59.0
+      .col-lg-3.col-md-4.col-sm-6
+        .product__item
+          .product__item__pic.set-bg{"data-setbg" => "https://picsum.photos/200/400"}
+            %ul.product__hover
+              %li
+                %a.image-popup{:href => "https://picsum.photos/200/400"}
+                  %span.arrow_expand
+              %li
+                %a{:href => "#"}
+                  %span.icon_heart_alt
+              %li
+                %a{:href => "#"}
+                  %span.icon_bag_alt
+          .product__item__text
+            %h6
+              %a{:href => "#"} Slim striped pocket shirt
+            .product__price $ 59.0

@@ -1,0 +1,41 @@
+.row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+
+  .col-1 {
+    width: 10%;
+  }
+
+  .col-2 {
+    width: 20%;
+  }
+
+  .col-3 {
+    width: 30%;
+  }
+
+  .col-4 {
+    width: 40%;
+  }
+
+  .col-5 {
+    width: 50%;
+  }
+
+  .col-6 {
+    width: 60%;
+  }
+
+  .col-respone {
+    @include respond-to-mobile() {
+      width: 100%;
+
+      div {
+        margin: 0;
+        margin-top: 15px;
+      }
+    }
+  }
+}

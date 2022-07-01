@@ -1,0 +1,9 @@
+.main {
+  padding: 200px 100px 0px 100px;
+  min-height: calc(100vh - 56px);
+  font-family: 'Open Sans', sans-serif;
+
+  @include repond-to-not-pc() {
+    padding: 175px 20px 0px 20px;
+  }
+}
