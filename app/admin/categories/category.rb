@@ -5,7 +5,7 @@ end
 ActiveAdmin.register Category do
   filter :name
 
-  permit_params :name, :code
+  permit_params :name, :code, :image, :describe, :active
   
   # scope :pending, default: true
   # scope :approved

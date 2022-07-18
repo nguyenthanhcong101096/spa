@@ -1,0 +1,16 @@
+.col-lg-4.col-md-6
+  .product__item
+    .product__item__pic.set-bg{"data-setbg" => "#{product.image.url}"}
+      %ul.product__hover
+        %li
+          %a{:href => "/products/1"}
+            = image_tag("bag.png", alt: 'seacrh', width: "18px", height: "20px")
+    .product__item__text
+      %h6
+        %a{:href => "/products/#{product.id}"}=product.name
+      - if product.discount
+        .product__price
+          =product.amount
+          %span=product.discount_price
+      - else
+        .product__price=product.amount

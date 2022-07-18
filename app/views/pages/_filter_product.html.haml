@@ -1,0 +1,15 @@
+%section.product.spad
+  .container
+    .row
+      .col-lg-2.col-md-2
+        .section-title
+          %h4 New product
+      .col-lg-10.col-md-10
+        %ul.filter__controls
+          %li.active{"data-filter" => "*"} All Categories
+
+          - Category.all.each do |cate|
+            %li{"data-filter" => ".#{cate.code}"}=cate.name
+    .row.property__gallery
+      - Category.all.each do |cate|
+        =render partial: 'item_filter_product', collection: cate.products.sample(5), as: :product

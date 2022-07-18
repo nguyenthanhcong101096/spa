@@ -1,9 +1,16 @@
 module CategoryTab
   def category_tab_code
     tab 'Danh mục' do
-      attributes = %i[code name created_at updated_at]
-
-      attributes_table(*attributes)
+      attributes_table do
+        row :name
+        row :describe
+        row :active
+        row :image do |cate|
+          image_tag(cate.image.url.to_s, height: '200', width: '300')
+        end
+        row :created_at
+        row :updated_at
+      end
     end
   end
 

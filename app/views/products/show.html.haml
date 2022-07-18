@@ -21,12 +21,12 @@
       .col-lg-6
         .product__details__text
           %h3
-            Essential structured blazer
+            = @product.name
             %span Brand: SKMEIMore Men Watches from SKMEI
           .product__details__price
             $ 75.0
             %span $ 83.0
-          %p Nemo enim ipsam voluptatem quia aspernatur aut odit aut loret fugit, sed quia consequuntur magni lores eos qui ratione voluptatem sequi nesciunt.
+          %p=@product.description
           .product__details__button
             .quantity
               %span Quantity:
@@ -40,35 +40,10 @@
           %ul.nav.nav-tabs{:role => "tablist"}
             %li.nav-item
               %a.nav-link.active{"data-toggle" => "tab", :href => "#tabs-1", :role => "tab"} Description
-            %li.nav-item
-              %a.nav-link{"data-toggle" => "tab", :href => "#tabs-2", :role => "tab"} Specification
-            %li.nav-item
-              %a.nav-link{"data-toggle" => "tab", :href => "#tabs-3", :role => "tab"} Reviews ( 2 )
           .tab-content
             #tabs-1.tab-pane.active{:role => "tabpanel"}
               %h6 Description
-              %p
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut loret fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt loret. Neque porro lorem quisquam est, qui dolorem ipsum quia
-                dolor si. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut loret fugit, sed quia ipsu consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Nulla consequat massa quis enim.
-              %p
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
-                nec, pellentesque eu, pretium quis, sem.
-            #tabs-2.tab-pane{:role => "tabpanel"}
-              %h6 Specification
-              %p
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut loret fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt loret. Neque porro lorem quisquam est, qui dolorem ipsum quia
-                dolor si. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut loret fugit, sed quia ipsu consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Nulla consequat massa quis enim.
-              %p
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
-                nec, pellentesque eu, pretium quis, sem.
-            #tabs-3.tab-pane{:role => "tabpanel"}
-              %h6 Reviews ( 2 )
-              %p
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut loret fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt loret. Neque porro lorem quisquam est, qui dolorem ipsum quia
-                dolor si. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut loret fugit, sed quia ipsu consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Nulla consequat massa quis enim.
-              %p
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
-                nec, pellentesque eu, pretium quis, sem.
+              %p=@product.description
     .row
       .col-lg-12.text-center
         .related__title

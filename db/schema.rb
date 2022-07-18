@@ -44,6 +44,9 @@ ActiveRecord::Schema.define(version: 2022_07_18_032958) do
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.string "code"
+    t.text "image"
+    t.string "describe"
+    t.boolean "active", default: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -52,6 +55,11 @@ ActiveRecord::Schema.define(version: 2022_07_18_032958) do
     t.string "name"
     t.text "image"
     t.bigint "category_id"
+    t.decimal "price"
+    t.boolean "discount", default: false
+    t.integer "discount_percent", default: 0
+    t.string "description"
+    t.boolean "active", default: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
