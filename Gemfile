@@ -66,7 +66,6 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem "rspec-rails", "~> 4.0.1"
-  gem 'faker'
   
   gem 'pry', '~> 0.13.1'
   gem 'pry-rails', '~> 0.3.9'
@@ -79,6 +78,7 @@ end
 gem 'devise', '~> 4.7.2'
 gem 'devise-security', '0.14.3'
 gem 'factory_bot_rails'
+gem 'faker'
 
 # Haml rails
 gem 'haml-rails', '~> 2.0', '>= 2.0.1'
