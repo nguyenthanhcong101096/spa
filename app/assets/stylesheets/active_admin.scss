@@ -15,6 +15,9 @@ a {
   text-decoration: none !important;
 }
 
+.categories__text a {
+  color: black !important;
+}
 // Overriding any non-variable Sass must be done after the fact.
 // For example, to change the default status-tag color:
 //

@@ -3,6 +3,12 @@ class Product < ApplicationRecord
 
   belongs_to :category
 
+  scope :with_category, -> (category_code = '') { 
+    return all if category_code.blank?
+    
+    joins(:category).where('categories.code = ?', category_code)
+   }
+
   def image_url
     image.url
   end

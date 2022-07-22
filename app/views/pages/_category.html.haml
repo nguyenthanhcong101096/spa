@@ -3,4 +3,4 @@
     .categories__text
       %h4=category.name
       %p=category.describe.truncate(100)
-      %a{:href => "/products"} Shop now
+      = link_to 'Shop now', products_path(code: category.code)

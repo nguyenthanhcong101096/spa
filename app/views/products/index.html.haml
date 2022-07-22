@@ -13,10 +13,10 @@
                 - Category.all.each do |cate|
                   .card
                     .card-heading
-                      = link_to cate.name, products_path(category_code: cate.code)
+                      = link_to cate.name, products_path(code: cate.code)
       .col-lg-9.col-md-9
         .row
-          = render partial: 'product', collection: Product.all, as: :product
+          = render partial: 'product', collection: @products, as: :product
 
           .col-lg-12.text-center
             .pagination__option
