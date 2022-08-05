@@ -12,8 +12,7 @@
               #accordionExample.accordion
                 - Category.all.each do |cate|
                   .card
-                    .card-heading
-                      = link_to cate.name, products_path(code: cate.code)
+                    %h4=link_to cate.name, products_path(code: cate.code)
       .col-lg-9.col-md-9
         .row
           = render partial: 'product', collection: @products, as: :product
@@ -25,36 +24,3 @@
               %a{:href => "#"} 3
               %a{:href => "#"}
                 = image_tag("next_page.png", alt: 'seacrh', width: "10px", height: "14px")
-.instagram
-  .container-fluid
-    .row
-      .col-lg-2.col-md-4.col-sm-4.p-0
-        .instagram__item.set-bg{"data-setbg" => "/ashion/img/instagram/insta-1.jpg"}
-          .instagram__text
-            %i.fa.fa-instagram
-            %a{:href => "#"} @ ashion_shop
-      .col-lg-2.col-md-4.col-sm-4.p-0
-        .instagram__item.set-bg{"data-setbg" => "/ashion/img/instagram/insta-2.jpg"}
-          .instagram__text
-            %i.fa.fa-instagram
-            %a{:href => "#"} @ ashion_shop
-      .col-lg-2.col-md-4.col-sm-4.p-0
-        .instagram__item.set-bg{"data-setbg" => "/ashion/img/instagram/insta-3.jpg"}
-          .instagram__text
-            %i.fa.fa-instagram
-            %a{:href => "#"} @ ashion_shop
-      .col-lg-2.col-md-4.col-sm-4.p-0
-        .instagram__item.set-bg{"data-setbg" => "/ashion/img/instagram/insta-4.jpg"}
-          .instagram__text
-            %i.fa.fa-instagram
-            %a{:href => "#"} @ ashion_shop
-      .col-lg-2.col-md-4.col-sm-4.p-0
-        .instagram__item.set-bg{"data-setbg" => "/ashion/img/instagram/insta-5.jpg"}
-          .instagram__text
-            %i.fa.fa-instagram
-            %a{:href => "#"} @ ashion_shop
-      .col-lg-2.col-md-4.col-sm-4.p-0
-        .instagram__item.set-bg{"data-setbg" => "/ashion/img/instagram/insta-6.jpg"}
-          .instagram__text
-            %i.fa.fa-instagram
-            %a{:href => "#"} @ ashion_shop

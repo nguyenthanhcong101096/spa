@@ -8,7 +8,7 @@
             = image_tag("bag.png", alt: 'seacrh', width: "18px", height: "20px")
     .product__item__text
       %h6
-        %a{:href => "#"}=product.name
+        %a{:href => "/products/#{product.id}"}=product.name
       - if product.discount
         .product__price
           =product.amount
