@@ -12,4 +12,4 @@
             %li{"data-filter" => ".#{cate.code}"}=cate.name
     .row.property__gallery
       - Category.all.each do |cate|
-        =render partial: 'item_filter_product', collection: cate.products.sample(5), as: :product
+        =render partial: 'item_filter_product', collection: cate.products.sample(6), as: :product
