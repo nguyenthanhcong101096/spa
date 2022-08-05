@@ -10,7 +10,7 @@
         %a{:href => "/products/#{product.id}"}=product.name
       - if product.discount
         .product__price
-          =product.amount
-          %span=product.discount_price
+          =number_to_currency(product.discount_price, unit: "VNĐ", separator: ",", delimiter: ".", format: "%n %u")
+          %span=number_to_currency(product.price.to_f, unit: "VNĐ", separator: ",", delimiter: ".", format: "%n %u")
       - else
-        .product__price=product.amount
+        .product__price=number_to_currency(product.price.to_f, unit: "VNĐ", separator: ",", delimiter: ".", format: "%n %u")

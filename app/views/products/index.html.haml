@@ -12,15 +12,10 @@
               #accordionExample.accordion
                 - Category.all.each do |cate|
                   .card
-                    %h4=link_to cate.name, products_path(code: cate.code)
+                    %h4.categories_text{class: current_tab(cate.code, params[:code])}=link_to cate.name, products_path(code: cate.code)
       .col-lg-9.col-md-9
         .row
           = render partial: 'product', collection: @products, as: :product
 
-          .col-lg-12.text-center
-            .pagination__option
-              %a{:href => "#"} 1
-              %a{:href => "#"} 2
-              %a{:href => "#"} 3
-              %a{:href => "#"}
-                = image_tag("next_page.png", alt: 'seacrh', width: "10px", height: "14px")
+          .col-lg-12.pagination-box
+            = paginate @products

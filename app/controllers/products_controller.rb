@@ -1,6 +1,10 @@
 class ProductsController < ApplicationController
+  PER_PAGE = 9
+
   def index
     @products = Product.with_category(params[:code])
+                       .page(params[:page])
+                       .per(PER_PAGE)
   end
 
   def cart
