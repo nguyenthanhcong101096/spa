@@ -10,70 +10,70 @@
 // Active Admin's got SASS!
 @import "active_admin/mixins";
 @import "active_admin/base";
-@import "products";
-@import "form";
-@import "search";
-@import "override";
+// @import "products";
+// @import "form";
+// @import "search";
+// @import "override";
 
-thead th {
-  background-color: white !important;
-}
+// thead th {
+//   background-color: white !important;
+// }
 
-a {
-  text-decoration: none !important;
-}
+// a {
+//   text-decoration: none !important;
+// }
 
-.pagination-box {
-  display: flex;
-  justify-content: space-around;
-}
+// .pagination-box {
+//   display: flex;
+//   justify-content: space-around;
+// }
 
-.pagination {
-  margin: 0 auto;
-  padding: 5px 10px;
-  display: table;
-  background: white;
+// .pagination {
+//   margin: 0 auto;
+//   padding: 5px 10px;
+//   display: table;
+//   background: white;
 
 
-  li {
-    display: table-cell;
-    list-style: none;
-    font-weight: bold;
-    padding-left: 16px;
-    padding-right: 16px;
-    background: white;
-  }
+//   li {
+//     display: table-cell;
+//     list-style: none;
+//     font-weight: bold;
+//     padding-left: 16px;
+//     padding-right: 16px;
+//     background: white;
+//   }
 
-  .current {
-    background-image: linear-gradient(180deg, #FFFFFF, #FFFFFF) !important;
-    color: black !important;
-    font-weight: 500 !important;
-    font-size: 14px !important;
-    border: 0px !important;
-    box-shadow: none !important;
-  }
+//   .current {
+//     background-image: linear-gradient(180deg, #FFFFFF, #FFFFFF) !important;
+//     color: black !important;
+//     font-weight: 500 !important;
+//     font-size: 14px !important;
+//     border: 0px !important;
+//     box-shadow: none !important;
+//   }
 
-  a {
-    border: 0px;
-    background-image: linear-gradient(180deg, #FFFFFF, #FFFFFF);
-    box-shadow: none;
-    padding: 9px 12px;
-    border-radius: 8px;
-    font-size: 14px;
+//   a {
+//     border: 0px;
+//     background-image: linear-gradient(180deg, #FFFFFF, #FFFFFF);
+//     box-shadow: none;
+//     padding: 9px 12px;
+//     border-radius: 8px;
+//     font-size: 14px;
 
-    &:hover,
-    &.active {
-      background-image: linear-gradient(180deg, #FFFFFF, #FFFFFF);
-    }
-  }
+//     &:hover,
+//     &.active {
+//       background-image: linear-gradient(180deg, #FFFFFF, #FFFFFF);
+//     }
+//   }
 
-  svg {
-    vertical-align: text-top;
-  }
+//   svg {
+//     vertical-align: text-top;
+//   }
 
-  .next,
-  .prev {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
+//   .next,
+//   .prev {
+//     padding-left: 0;
+//     padding-right: 0;
+//   }
+// }

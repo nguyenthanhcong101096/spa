@@ -4,4 +4,8 @@ class PagesController < ApplicationController
 
   def contact
   end
+
+  def not_found
+    render json: {a: '1'}
+  end
 end

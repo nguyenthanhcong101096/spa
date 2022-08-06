@@ -5,7 +5,7 @@
 
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
-import "../stylesheets/application"
+import "../stylesheets/application.scss"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
@@ -16,9 +16,3 @@ import * as Routes from '../routes';
 window.Routes = Routes;
 
 const $ = require('jquery')
-
-window.onload=function(){
-  $('div').on('click', function(){
-    window.location.href = window.location.href;
-  })
-};
