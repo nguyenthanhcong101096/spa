@@ -2,7 +2,8 @@ class ProductsController < ApplicationController
   PER_PAGE = 9
 
   def index
-    @products = Product.with_category(params[:code])
+    @products = Product.search_by(params[:q])
+                       .with_category(params[:code])
                        .page(params[:page])
                        .per(PER_PAGE)
   end

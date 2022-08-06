@@ -11,6 +11,8 @@
 @import "active_admin/mixins";
 @import "active_admin/base";
 @import "products";
+@import "form";
+@import "search";
 
 a {
   text-decoration: none !important;

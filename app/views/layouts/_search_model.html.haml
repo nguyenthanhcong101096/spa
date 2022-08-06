@@ -1,5 +1,6 @@
 .search-model
   .h-100.d-flex.align-items-center.justify-content-center
     .search-close-switch +
-    %form.search-model-form
-      %input#search-input{:placeholder => "Search here.....", :type => "text"}/
+    = form_with url: products_path, method: :get, local: { remote: true }, class: "search-model-form" do |f|
+      = f.hidden_field :code, value: params[:code] if params.key?(:code)
+      %input#search-input.form-control.seach-input{:placeholder => "Search here.....", id: 'q', name: 'q', :type => "text"}/

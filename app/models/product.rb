@@ -9,6 +9,12 @@ class Product < ApplicationRecord
     joins(:category).where('categories.code = ?', category_code)
    }
 
+  def self.search_by(keyword)
+    return all if keyword.blank?
+  
+    where("products.name LIKE :keyword", keyword: "%#{keyword}%")
+  end
+
   def image_url
     image.url
   end
