@@ -9,6 +9,8 @@ class Product < ApplicationRecord
     joins(:category).where('categories.code = ?', category_code)
    }
 
+  delegate :name, :code, to: :category, prefix: true, allow_nil: true
+
   def self.search_by(keyword)
     return all if keyword.blank?
   

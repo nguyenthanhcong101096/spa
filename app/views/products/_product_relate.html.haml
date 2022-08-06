@@ -1,0 +1,18 @@
+.col-lg-3.col-md-4.col-sm-6
+  .product__item
+    .product__item__pic.set-bg{"data-setbg" => "#{product.image_url}"}
+      - if product.discount
+        .label.new Disccount
+      %ul.product__hover
+        %li
+          %a{:href => "/products/1"}
+            = image_tag("bag.png", alt: 'seacrh', width: "18px", height: "20px")
+    .product__item__text
+      %h6
+        %a{:href => "/products/#{product.id}"}=product.name
+      - if product.discount
+        .product__price
+          =number_to_currency(product.discount_price, unit: "VNĐ", separator: ",", delimiter: ".", format: "%n %u")
+          %span=number_to_currency(product.price.to_f, unit: "VNĐ", separator: ",", delimiter: ".", format: "%n %u")
+      - else
+        .product__price=number_to_currency(product.price.to_f, unit: "VNĐ", separator: ",", delimiter: ".", format: "%n %u")

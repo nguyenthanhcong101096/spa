@@ -24,16 +24,19 @@
         .product__details__text
           %h3
             = @product.name
-            %span Brand: SKMEIMore Men Watches from SKMEI
+            %span="Category: #{@product.category_name}"
           .product__details__price
-            $ 75.0
-            %span $ 83.0
+            - if @product.discount
+              =number_to_currency(@product.discount_price, unit: "VNĐ", separator: ",", delimiter: ".", format: "%n %u")
+              %span=number_to_currency(@product.price.to_f, unit: "VNĐ", separator: ",", delimiter: ".", format: "%n %u")
+            - else
+              =number_to_currency(@product.price.to_f, unit: "VNĐ", separator: ",", delimiter: ".", format: "%n %u")
           %p=@product.description
           .product__details__button
             .quantity
               %span Quantity:
               .pro-qty
-                %input{:type => "text", :value => "1"}/
+                %input{:type => "number", min: "1", :value => "1"}/
             %a.cart-btn{:href => "#"}
               = image_tag("cart2.png", alt: 'seacrh', width: "14px", height: "16px")
               Add to cart
@@ -50,73 +53,4 @@
       .col-lg-12.text-center
         .related__title
           %h5 RELATED PRODUCTS
-      .col-lg-3.col-md-4.col-sm-6
-        .product__item
-          .product__item__pic.set-bg{"data-setbg" => "https://picsum.photos/200/400"}
-            .label.new New
-            %ul.product__hover
-              %li
-                %a.image-popup{:href => "https://picsum.photos/200/400"}
-                  %span.arrow_expand
-              %li
-                %a{:href => "#"}
-                  %span.icon_heart_alt
-              %li
-                %a{:href => "#"}
-                  %span.icon_bag_alt
-          .product__item__text
-            %h6
-              %a{:href => "#"} Buttons tweed blazer
-            .product__price $ 59.0
-      .col-lg-3.col-md-4.col-sm-6
-        .product__item
-          .product__item__pic.set-bg{"data-setbg" => "https://picsum.photos/200/400"}
-            %ul.product__hover
-              %li
-                %a.image-popup{:href => "https://picsum.photos/200/400"}
-                  %span.arrow_expand
-              %li
-                %a{:href => "#"}
-                  %span.icon_heart_alt
-              %li
-                %a{:href => "#"}
-                  %span.icon_bag_alt
-          .product__item__text
-            %h6
-              %a{:href => "#"} Flowy striped skirt
-            .product__price $ 49.0
-      .col-lg-3.col-md-4.col-sm-6
-        .product__item
-          .product__item__pic.set-bg{"data-setbg" => "https://picsum.photos/200/400"}
-            .label.stockout out of stock
-            %ul.product__hover
-              %li
-                %a.image-popup{:href => "https://picsum.photos/200/400"}
-                  %span.arrow_expand
-              %li
-                %a{:href => "#"}
-                  %span.icon_heart_alt
-              %li
-                %a{:href => "#"}
-                  %span.icon_bag_alt
-          .product__item__text
-            %h6
-              %a{:href => "#"} Cotton T-Shirt
-            .product__price $ 59.0
-      .col-lg-3.col-md-4.col-sm-6
-        .product__item
-          .product__item__pic.set-bg{"data-setbg" => "https://picsum.photos/200/400"}
-            %ul.product__hover
-              %li
-                %a.image-popup{:href => "https://picsum.photos/200/400"}
-                  %span.arrow_expand
-              %li
-                %a{:href => "#"}
-                  %span.icon_heart_alt
-              %li
-                %a{:href => "#"}
-                  %span.icon_bag_alt
-          .product__item__text
-            %h6
-              %a{:href => "#"} Slim striped pocket shirt
-            .product__price $ 59.0
+      = render partial: 'product_relate', collection: Product.with_category(@product.category_code).sample(8), as: :product
