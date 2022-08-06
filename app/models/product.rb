@@ -16,7 +16,11 @@ class Product < ApplicationRecord
   end
 
   def image_url
-    image.url
+    dummy = AppSetting.last.dummy_image
+
+    return image.url.to_s unless dummy
+
+    "/ashion/img/shop/shop-#{rand(1..9)}.jpg"
   end
 
   def discount_price

@@ -51,8 +51,9 @@ ActiveRecord::Schema.define(version: 2022_08_06_051516) do
     t.string "phone"
     t.string "email"
     t.string "google_map"
-    t.integer "width_logo"
-    t.integer "height_logo"
+    t.integer "width_logo", default: 50
+    t.integer "height_logo", default: 50
+    t.boolean "dummy_image", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

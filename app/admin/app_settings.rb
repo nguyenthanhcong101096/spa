@@ -3,7 +3,7 @@ ActiveAdmin.register AppSetting do
 
   actions :index, :show, :edit, :update
 
-  permit_params :email, :phone, :address, :logo, :width_logo, :height_logo, :google_map, :title, :description
+  permit_params :email, :phone, :address, :logo, :width_logo, :height_logo, :google_map, :title, :description, :dummy_image
 
   index do
     selectable_column
@@ -29,6 +29,7 @@ ActiveAdmin.register AppSetting do
       f.input :phone
       f.input :address
       f.input :google_map
+      f.input :dummy_image
     end
     f.actions
   end
