@@ -8,7 +8,7 @@
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_pack_tag 'application'
-    = javascript_pack_tag 'application'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     = render 'layouts/load'
     = render 'layouts/header', tab: yield(:tab)
