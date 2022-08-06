@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  PER_PAGE = 9
+  PER_PAGE = 12
 
   def index
     @products = Product.search_by(params[:q])
