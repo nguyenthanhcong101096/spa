@@ -14,8 +14,8 @@
               %a{:href => "/"} Home
             %li{class: current_tab("products", @tab)}
               %a{:href => "/products"} Products
-            %li
-              %a{:href => "./contact.html"} Policy & shipping
+            %li{class: current_tab("cart", @tab)}
+              %a{:href => "/products/cart"} Cart
             %li
               %a{:href => "/contact"} Contact
       .col-lg-3
