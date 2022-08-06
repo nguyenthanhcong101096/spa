@@ -13,6 +13,11 @@
 @import "products";
 @import "form";
 @import "search";
+@import "override";
+
+thead th {
+  background-color: white !important;
+}
 
 a {
   text-decoration: none !important;
