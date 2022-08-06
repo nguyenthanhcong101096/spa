@@ -10,7 +10,7 @@ if AdminUser.count < 1
 end
 
 5.times do |i|
-  location = "public/ashion/img/categories/category-#{i + 1}.jpg"
+  location = "public/ashion/img/categories/#{i + 1}.png"
   image = Rails.root.join(location)
   category = FactoryBot.create(:category, image: image.open)
 

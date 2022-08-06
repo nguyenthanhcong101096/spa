@@ -1,3 +1,32 @@
-// Place all the styles related to the products controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.categories__text a {
+  color: black !important;
+}
+
+.categories_text > a {
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+  line-height: 1;
+  color: #808080;
+
+  &:hover {
+    color: #f4364c !important;
+    opacity: 0.5;
+  }
+}
+
+.active > a {
+  color: #f4364c ;
+}
+
+.product__item__text > h6 > a {
+  font-size: 16px !important;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: .2px;
+}
+
+.product__price {
+  font-size: 14px;
+  color: #f4364c !important;
+}
