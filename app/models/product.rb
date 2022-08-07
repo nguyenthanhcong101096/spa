@@ -32,4 +32,10 @@ class Product < ApplicationRecord
 
     total
   end
+
+  def amount
+    return discount_price if discount
+
+    price
+  end
 end

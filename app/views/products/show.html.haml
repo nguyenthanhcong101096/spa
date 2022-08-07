@@ -13,10 +13,10 @@
             %span="Category: #{@product.category_name}"
           .product__details__price
             - if @product.discount
-              =number_to_currency(@product.discount_price, unit: "VNĐ", separator: ",", delimiter: ".", format: "%n %u")
-              %span=number_to_currency(@product.price.to_f, unit: "VNĐ", separator: ",", delimiter: ".", format: "%n %u")
+              =number_to_currency(@product.amount, unit: "VNĐ", separator: ",", delimiter: ".", format: "%n %u")
+              %span=number_to_currency(@product.amount, unit: "VNĐ", separator: ",", delimiter: ".", format: "%n %u")
             - else
-              =number_to_currency(@product.price.to_f, unit: "VNĐ", separator: ",", delimiter: ".", format: "%n %u")
+              =number_to_currency(@product.amount, unit: "VNĐ", separator: ",", delimiter: ".", format: "%n %u")
           %p=@product.description
           .product__details__button
             .quantity

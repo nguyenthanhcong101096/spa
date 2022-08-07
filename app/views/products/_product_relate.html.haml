@@ -5,14 +5,14 @@
         .label.new Disccount
       %ul.product__hover
         %li
-          %a{:href => "#"}
+          %a{'data' => product_json(product)}
             = image_tag("bag.png", alt: 'seacrh', width: "18px", height: "20px")
     .product__item__text
       %h6
         %a{:href => "/products/#{product.id}"}=product.name
       - if product.discount
         .product__price
-          =number_to_currency(product.discount_price, unit: "VNĐ", separator: ",", delimiter: ".", format: "%n %u")
-          %span=number_to_currency(product.price.to_f, unit: "VNĐ", separator: ",", delimiter: ".", format: "%n %u")
+          =number_to_currency(product.amount, unit: "VNĐ", separator: ",", delimiter: ".", format: "%n %u")
+          %span=number_to_currency(product.amount, unit: "VNĐ", separator: ",", delimiter: ".", format: "%n %u")
       - else
-        .product__price=number_to_currency(product.price.to_f, unit: "VNĐ", separator: ",", delimiter: ".", format: "%n %u")
+        .product__price=number_to_currency(product.amount, unit: "VNĐ", separator: ",", delimiter: ".", format: "%n %u")

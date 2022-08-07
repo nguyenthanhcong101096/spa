@@ -5,16 +5,16 @@
 
 import Rails from "@rails/ujs"
 // import Turbolinks from "turbolinks"
+import "bootstrap"
 import "../stylesheets/application.scss"
-import "./script"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import * as Routes from '../routes';
+import "./add_cart"
 
 Rails.start()
 // Turbolinks.start()
 ActiveStorage.start()
-
-import * as Routes from '../routes';
 window.Routes = Routes;
 
 const $ = require('jquery')
