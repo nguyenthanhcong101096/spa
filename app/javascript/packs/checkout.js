@@ -26,7 +26,6 @@ function checkOut(){
     if (listProduct.hasOwnProperty(key)) {
       var product = listProduct[key][0]
       var quantity = listProduct[key].length
-      var price = (product['price'] * 1.0).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
       var total = (product['price'] * quantity).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 
       totalPrice = (totalPrice + (product['price'] * quantity))
@@ -48,4 +47,7 @@ function checkOut(){
 
 $(function () {
   checkOut();
+  $('.js-create-order').on('click', function(){
+    localStorage.setItem('shop_cart', null)
+  })
 })
