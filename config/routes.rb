@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :orders, only: %i[index create]
+
   root to: redirect('/'), as: 'root'
   
   get '*path'     => 'pages#not_found'

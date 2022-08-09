@@ -1,6 +1,6 @@
 %section.checkout.spad
   .container
-    %form.checkout__form{:action => "#"}
+    = form_with url: orders_path, method: :post, local: { remote: true }, class: "checkout__form" do |f|
       .row
         .col-lg-8
           %h5 Billing detail
@@ -10,31 +10,31 @@
                 %p
                   Full Name
                   %span *
-                %input{:type => "text"}/
+                = f.text_field :full_name, type: "text", require: true, placeholder: "Please input your name"
             .col-lg-12
               .checkout__form__input
                 %p
                   Address
                   %span *
-                %input{:type => "text"}/
+                = f.text_field :address, type: "text", require: true, placeholder: "Please input your address"
             .col-lg-6.col-md-6.col-sm-6
               .checkout__form__input
                 %p
                   Phone
                   %span *
-                %input{:type => "number"}/
+                = f.text_field :phone, type: "number", require: true, placeholder: "+84 123456"
             .col-lg-6.col-md-6.col-sm-6.hidden
               .checkout__form__input
                 %p
                   Email
                   %span *
-                %input{:type => "text"}/
+                = f.text_field :email, type: "email", require: true
             .col-lg-12
               .checkout__form__input
                 %p
                   Oder notes
                   %span *
-                %input{:placeholder => "Note about your order, e.g, special noe for delivery", :type => "text"}/
+                = f.text_field :note, type: "text", placeholder: "Note about your order, e.g, special noe for delivery"
         .col-lg-4
           .checkout__order
             %h5 Your order
