@@ -1,4 +1,5 @@
 const $ = require('jquery')
+import * as Routes from '../routes';
 
 function checkOut(){
   const checkout = $('.js-checkout')
@@ -42,6 +43,7 @@ function checkOut(){
   }
 
   $('.js-total-price').text(`${totalPrice.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')} VNĐ`)
+  $('#products').val(JSON.stringify(shopCart))
 }
 
 $(function () {

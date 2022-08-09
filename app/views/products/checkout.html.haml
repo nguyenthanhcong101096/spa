@@ -1,6 +1,7 @@
 %section.checkout.spad
   .container
-    = form_with url: orders_path, method: :post, local: { remote: false }, class: "checkout__form" do |f|
+    = form_with(remote: true, url: orders_path, method: 'POST', id: 'createOrderForm', class: 'checkout__form') do |f|
+      = f.hidden_field :products
       .row
         .col-lg-8
           %h5 Billing detail
@@ -49,4 +50,4 @@
                 %li
                   Total
                   %span.js-total-price 0 VNĐ
-            %button.site-btn{:type => "submit"} Place oder
+            %button.site-btn.js-create-order Place oder
