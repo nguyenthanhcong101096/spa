@@ -3,7 +3,8 @@ module ProductsHelper
     product.slice(:id, :name).merge({
       price: product.amount,
       original_price: product.price.to_f,
-      discount: product.discount.to_s
+      discount: product.discount.to_s,
+      image: product.image_url
     })
   end
 end
