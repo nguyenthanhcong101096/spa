@@ -54,15 +54,15 @@ function showListOrder() {
 
   // Group by color as key to the person array
   const ordersGroup = groupBy(shopCart, 'id');
-  
+
   var totalPrice = 0
 
   for (var key in ordersGroup) {
     if (ordersGroup.hasOwnProperty(key)) {
-      var product  = ordersGroup[key][0]
+      var product = ordersGroup[key][0]
       var quantity = ordersGroup[key].length
-      var price    = (product['price'] * 1.0).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
-      var total    = (product['price'] * quantity).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+      var price = (product['price'] * 1.0).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+      var total = (product['price'] * quantity).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 
       totalPrice = totalPrice + (product['price'] * quantity)
 
@@ -91,8 +91,35 @@ function showListOrder() {
   $('.js-total-price').text(`${totalPrice.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')} VNĐ`)
 }
 
+function btnAddToCart() {
+  const quantity = $('.js-quantity')
+
+  $('.js-btn-cart').on('click', function () {
+    var array = Array(parseInt(quantity.val())).fill(null)
+    array.forEach(function () {
+      const product = $('.js-btn-cart').data();
+      const numberCart = $('.number-cart')
+
+      const shopCart = JSON.parse(localStorage.getItem('shop_cart'))
+
+      numberCart.removeClass('hidden')
+
+      if (Array.isArray(shopCart)) {
+        shopCart.push(product)
+
+        localStorage.setItem('shop_cart', JSON.stringify(shopCart))
+        numberCart.text(shopCart.length)
+      } else {
+        localStorage.setItem('shop_cart', JSON.stringify([product]))
+        numberCart.text('1')
+      }
+    })
+  })
+}
+
 $(function () {
   showNumberAddCart();
   addToCart();
+  btnAddToCart();
   showListOrder();
 })

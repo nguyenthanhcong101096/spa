@@ -22,7 +22,7 @@
             .quantity
               %span Quantity:
               .pro-qty
-                %input.js-quantity{:type => "number", min: "1", :value => "1"}/
+                %input.js-quantity{:type => "number", min: "1", max: "5", :value => "1"}/
             %a.cart-btn.js-btn-cart{'data' => product_json(@product)}
               = image_tag("cart2.png", alt: 'seacrh', width: "14px", height: "16px")
               Add to cart
