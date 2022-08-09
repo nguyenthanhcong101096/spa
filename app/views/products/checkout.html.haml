@@ -22,8 +22,8 @@
                 %p
                   Phone
                   %span *
-                %input{:type => "text"}/
-            .col-lg-6.col-md-6.col-sm-6
+                %input{:type => "number"}/
+            .col-lg-6.col-md-6.col-sm-6.hidden
               .checkout__form__input
                 %p
                   Email
@@ -39,30 +39,14 @@
           .checkout__order
             %h5 Your order
             .checkout__order__product
-              %ul
+              %ul.js-checkout
                 %li
                   %span.top__text Product
                   %span.top__text__right Total
-                %li
-                  01. Chain buck bag
-                  %span $ 300.0
-                %li
-                  02. Zip-pockets pebbled
-                  %br/
-                  tote briefcase
-                  %span $ 170.0
-                %li
-                  03. Black jean
-                  %span $ 170.0
-                %li
-                  04. Cotton shirt
-                  %span $ 110.0
+
             .checkout__order__total
               %ul
                 %li
-                  Subtotal
-                  %span $ 750.0
-                %li
                   Total
-                  %span $ 750.0
+                  %span.js-total-price 0 VNĐ
             %button.site-btn{:type => "submit"} Place oder

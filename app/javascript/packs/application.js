@@ -11,6 +11,7 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import * as Routes from '../routes';
 import "./add_cart"
+import "./checkout"
 
 Rails.start()
 // Turbolinks.start()
