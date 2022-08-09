@@ -1,0 +1,6 @@
+%div
+  %ul
+    -Order.order(id: :desc).all.map do |order|
+      %li
+        = link_to(admin_order_path(order)) do
+          %h4="#{order.created_at} - #{order.full_name} - #{order.phone}"

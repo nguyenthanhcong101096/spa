@@ -7,13 +7,9 @@ ActiveAdmin.register_page "Dashboard" do
       column do
         para "Đơn hàng đợi xử lý"
         panel "Orders" do
-          ul do
-            Product.all.map do |product|
-              li link_to(product.name, admin_product_path(product))
-            end
-          end
+          render partial: 'admin/dashboard/order'
 
-          span { link_to("See all", admin_products_path, method: :get, class: 'button') }
+          span { link_to("See all", admin_orders_path, method: :get, class: 'button') }
         end
       end
 

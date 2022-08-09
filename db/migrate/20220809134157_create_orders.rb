@@ -6,6 +6,7 @@ class CreateOrders < ActiveRecord::Migration[6.1]
       t.string :phone, null: false
       t.string :email
       t.string :note
+      t.boolean :delivery, default: false
 
       t.timestamps
     end
