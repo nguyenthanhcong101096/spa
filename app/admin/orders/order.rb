@@ -30,8 +30,10 @@ ActiveAdmin.register Order do
       row :address
       row :phone
       row :note
-      row :description
       row :created_at
+      row :total_price do |record|
+        number_to_currency(record.order_products.sum(:total_price), unit: "VNĐ", separator: ",", delimiter: ".", format: "%n %u")
+      end
     end
 
     tabs do 
@@ -41,7 +43,7 @@ ActiveAdmin.register Order do
       panel record.product_name do
         attributes_table_for record do
           row :name do
-            record.product_name
+            link_to(record.product_name, admin_product_path(record.product_id))
           end
 
           row :image do |record|
