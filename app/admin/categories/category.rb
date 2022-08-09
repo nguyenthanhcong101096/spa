@@ -3,6 +3,8 @@ def show_widget(widget, name)
 end
 
 ActiveAdmin.register Category do
+  menu :priority => 3
+  
   filter :name
 
   permit_params :name, :code, :image, :describe, :active

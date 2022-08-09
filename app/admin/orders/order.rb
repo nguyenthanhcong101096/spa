@@ -1,7 +1,16 @@
 ActiveAdmin.register Order do
   config.filters = false
+  menu :priority => 2
 
   actions :index, :show, :edit, :update
+
+  scope :not_delivery, :default => true do |order|
+    order.where(delivery: false)
+  end
+
+  scope :delivery do |order|
+    order.where(delivery: true)
+  end
 
   index do
     selectable_column

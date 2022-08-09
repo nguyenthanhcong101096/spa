@@ -1,6 +1,7 @@
 ActiveAdmin.register AppSetting do
   config.filters = false
-
+  menu :priority => 4
+  
   actions :index, :show, :edit, :update
 
   permit_params :email, :phone, :address, :logo, :width_logo, :height_logo, :google_map, :title, :description, :dummy_image
