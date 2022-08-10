@@ -2,7 +2,12 @@ ActiveAdmin.register Order do
   config.filters = false
   menu :priority => 2
 
-  actions :index, :show, :edit, :update
+  actions :index, :show
+
+  member_action :delivery, method: :post do
+    Order.find_by(id: params[:id]).update(delivery: params['status'])
+    redirect_to admin_order_path(params[:id]), notice: 'Đơn hàng đã được xử lý'
+  end
 
   scope :not_delivery, :default => true do |order|
     order.where(delivery: 'not_delivery')
@@ -50,6 +55,17 @@ ActiveAdmin.register Order do
           row :total_price do |record|
             number_to_currency(record.order_products.sum(:total_price), unit: "VNĐ", separator: ",", delimiter: ".", format: "%n %u")
           end
+          row :delivery_status do |record|
+            record.delivery
+          end
+        end
+        
+        span { link_to('Quay lại', admin_orders_path, method: :get, class: 'button') }
+
+        unless order.delivery == 'delivery_done'
+          message = order.delivery == 'not_delivery' ? 'Xử lý đơn hàng' : 'Xử lý xong đơn hàng'
+
+          span { link_to(message, delivery_admin_order_path(id: order.id, status: order.delivery_status_change), method: :post, class: 'button') }
         end
       end
 

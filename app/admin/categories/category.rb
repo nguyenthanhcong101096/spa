@@ -9,9 +9,6 @@ ActiveAdmin.register Category do
 
   permit_params :name, :code, :image, :describe, :active
   
-  # scope :pending, default: true
-  # scope :approved
-
   action_item :method_get, only: [:index] do
     link_to('METHOD GET', method_get_admin_categories_path)
   end
@@ -20,6 +17,7 @@ ActiveAdmin.register Category do
     @a = 'HOAL'
     render 'admin/categories/method_get', locals: {a: 'hola'}
   end
+
   index do
     selectable_column
     id_column
