@@ -70,7 +70,7 @@ ActiveAdmin.register Order do
         unless order.delivery == 'delivery_done'
           message = order.delivery == 'not_delivery' ? 'Xử lý đơn hàng' : 'Xử lý xong đơn hàng'
 
-          span { link_to(message, delivery_admin_order_path(id: order.id, status: order.delivery_status_change), method: :post, class: 'button') }
+          span { link_to(message, delivery_admin_order_path(id: order.id, status: order.delivery_status_change), method: :post, class: 'button', :data => {:confirm => 'Are you sure?'}) }
         end
       end
 
