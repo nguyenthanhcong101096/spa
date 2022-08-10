@@ -5,11 +5,15 @@ ActiveAdmin.register Order do
   actions :index, :show, :edit, :update
 
   scope :not_delivery, :default => true do |order|
-    order.where(delivery: false)
+    order.where(delivery: 'not_delivery')
   end
 
   scope :delivery do |order|
-    order.where(delivery: true)
+    order.where(delivery: 'delivery')
+  end
+
+  scope :delivery_done do |order|
+    order.where(delivery: 'delivery_done')
   end
 
   index do

@@ -84,7 +84,7 @@ ActiveRecord::Schema.define(version: 2022_08_09_134626) do
     t.string "phone", null: false
     t.string "email"
     t.string "note"
-    t.boolean "delivery", default: false
+    t.string "delivery", default: "not_delivery"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
