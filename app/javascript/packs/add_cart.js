@@ -12,7 +12,7 @@ function handleDataProduct() {
     shopCart.push(product)
 
     localStorage.setItem('shop_cart', JSON.stringify(shopCart))
-    numberCart.text(shopCart.length)
+    numberCart.text(Object.keys(groupBy(shopCart, 'id')).length)
   } else {
     localStorage.setItem('shop_cart', JSON.stringify([product]))
     numberCart.text('1')
@@ -32,27 +32,25 @@ function showNumberAddCart() {
   if (shopCart == null) return;
 
   numberCart.removeClass('hidden')
-  numberCart.text(shopCart.length)
+
+  numberCart.text(Object.keys(groupBy(shopCart, 'id')).length)
+}
+
+function groupBy(array, key) {
+  return array.reduce((result, currentValue) => {
+    // If an array already present for key, push it to the array. Else create an array and push the object
+    (result[currentValue[key]] = result[currentValue[key]] || []).push(
+      currentValue
+    );
+    // Return the current iteration `result` value, this will be taken as next iteration `result` value and accumulate
+    return result;
+  }, {});
 }
 
 function showListOrder() {
   const shopCart = JSON.parse(localStorage.getItem('shop_cart'))
   const listOrderProduct = $('.js-list-order')
 
-  // Accepts the array and key
-  const groupBy = (array, key) => {
-    // Return the end result
-    return array.reduce((result, currentValue) => {
-      // If an array already present for key, push it to the array. Else create an array and push the object
-      (result[currentValue[key]] = result[currentValue[key]] || []).push(
-        currentValue
-      );
-      // Return the current iteration `result` value, this will be taken as next iteration `result` value and accumulate
-      return result;
-    }, {}); // empty object is the initial value for result object
-  };
-
-  // Group by color as key to the person array
   const ordersGroup = groupBy(shopCart, 'id');
 
   var totalPrice = 0
@@ -108,7 +106,7 @@ function btnAddToCart() {
         shopCart.push(product)
 
         localStorage.setItem('shop_cart', JSON.stringify(shopCart))
-        numberCart.text(shopCart.length)
+        numberCart.text(Object.keys(groupBy(shopCart, 'id')).length)
       } else {
         localStorage.setItem('shop_cart', JSON.stringify([product]))
         numberCart.text('1')
