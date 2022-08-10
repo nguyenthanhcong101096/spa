@@ -6,24 +6,24 @@ ActiveAdmin.register_page "Dashboard" do
     columns do
       column do
         para "Đơn hàng đợi xử lý"
-        panel "Orders" do
+        panel "Not Delivery" do
           render partial: 'admin/dashboard/order'
 
-          span { link_to("See all", admin_orders_path, method: :get, class: 'button') }
+          span { link_to("See all", admin_orders_path(scope: 'not_delivery'), method: :get, class: 'button') }
         end
       end
 
       column do
-        para "Đơn hàng đã được xữ lý"
+        para "Đơn hàng đang vận chuyển"
 
-        panel "Deliveries" do
+        panel "Delivering" do
           ul do
-            Product.all.map do |product|
-              li link_to(product.name, admin_product_path(product))
+            Order.order(id: :desc).where(delivery: 'delivery').map do |product|
+              li link_to("#{product.code} - #{product.full_name}", admin_product_path(product))
             end
           end
 
-          span { link_to("See all", '/', method: :get, class: 'button') }
+          span { link_to("See all", admin_orders_path(scope: 'delivery'), method: :get, class: 'button') }
         end
       end
     end

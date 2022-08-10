@@ -13,6 +13,7 @@ class CreateOrderService
     
     return false unless @order.valid?
 
+    @order.code = Faker::Code.imei
     @order.save!
     create_order_products(@order.reload)
     true 

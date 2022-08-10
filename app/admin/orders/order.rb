@@ -1,6 +1,9 @@
 ActiveAdmin.register Order do
-  config.filters = false
   menu :priority => 2
+
+  filter :code
+  filter :phone
+  filter :full_name
 
   actions :index, :show
 
@@ -24,6 +27,7 @@ ActiveAdmin.register Order do
   index do
     selectable_column
 
+    column :code
     column :full_name
     column :address
     column :phone
@@ -47,6 +51,7 @@ ActiveAdmin.register Order do
       column do
         para "Thông tin đơn hàng"
         attributes_table do
+          row :code
           row :full_name 
           row :address
           row :phone

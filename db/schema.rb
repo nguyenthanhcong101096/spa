@@ -79,6 +79,7 @@ ActiveRecord::Schema.define(version: 2022_08_09_134626) do
   end
 
   create_table "orders", force: :cascade do |t|
+    t.string "code", null: false
     t.string "full_name", null: false
     t.string "address", null: false
     t.string "phone", null: false
