@@ -3,10 +3,10 @@
     .product__item__pic.set-bg{"data-setbg" => "#{product.image_url}"}
       - if product.discount
         .label.new Disccount
-      %ul.product__hover
-        %li
-          %a{class: 'js-add-to-cart','data' => product_json(product)}
-            = image_tag("bag.png", alt: 'seacrh', width: "18px", height: "20px")
+      -# %ul.product__hover
+      -#   %li
+      -#     %a{class: 'js-add-to-cart','data' => product_json(product)}
+      -#       = image_tag("bag.png", alt: 'seacrh', width: "18px", height: "20px")
     .product__item__text
       %h6
         %a{:href => "/products/#{product.id}"}=product.name
