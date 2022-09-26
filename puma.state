@@ -1,0 +1,5 @@
+---
+pid: 469994
+control_url: unix:///home/spa/pumactl.sock
+control_auth_token: b37ab27da9f4abbf80835d2b830e17cf
+running_from: "/home/spa"
